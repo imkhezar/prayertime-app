@@ -22,8 +22,8 @@ const citySearch= (city) => {
         {
             console.log(chalk.red.inverse('No internet Connection!'))
         }
-        else if(response.body.error){
-            console.log("Unable to find Location")
+        else if(response.body.features.length===0){
+            console.log(chalk.redBright.inverse("Unable to find Location"))
         }
         else{
             console.log(chalk.white.inverse(response.body.features[0].place_name))
