@@ -1,6 +1,6 @@
 const request = require('request')
 const yargs= require('yargs')
-const {citySearch}= require('./CitySearch')
+const {prayerTimes}= require('./PrayerTimes')
 
 
 yargs.command({
@@ -13,9 +13,10 @@ yargs.command({
             type: 'string'
         },
 
+
     },  
     handler: function(args){
-        citySearch(args.cityname)
+        prayerTimes(args.cityname)
     }
 })
 yargs.parse()
