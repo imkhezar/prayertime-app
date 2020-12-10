@@ -18,17 +18,28 @@ const citySearch= (city) => {
 
 
     request({url: url2 , json:true} , ( error , response ) =>{
-        console.log(chalk.white.inverse(response.body.features[0].place_name))
-        const long=response.body.features[0].center[0]
-        const lat=response.body.features[0].center[1]
-        const url ='http://api.aladhan.com/v1/calendar?latitude='+lat+'&longitude='+long+'&method=2&school=1'
+        if(error)
+        {
+            console.log(chalk.red.inverse('No internet Connection!'))
+        }
+        else if(response.body.error){
+            console.log("Unable to find Location")
+        }
+        else{
+            console.log(chalk.white.inverse(response.body.features[0].place_name))
+            const long=response.body.features[0].center[0]
+            const lat=response.body.features[0].center[1]
+            const url ='http://api.aladhan.com/v1/calendar?latitude='+lat+'&longitude='+long+'&method=2&school=1'
+            request({url: url , json:true} , ( error , response ) =>{
+                const url ='http://api.aladhan.com/v1/calendar?latitude='+lat+'&longitude='+long+'&method=2&school=1'
+               
+                console.log(response.body.data[0].timings)
+                
+           })
+   
+        }
 
-         request({url: url , json:true} , ( error , response ) =>{
-             const url ='http://api.aladhan.com/v1/calendar?latitude='+lat+'&longitude='+long+'&method=2&school=1'
-            
-             console.log(response.body.data[0].timings)
-})
-
+         
 })
 }
 
