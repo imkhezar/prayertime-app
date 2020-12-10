@@ -32,6 +32,10 @@ const geocode=(city,callback)=>{
 }
 const prayerTimes = ( city,callback )=>{
     geocode(city,(error,data)=>{
+        if(error){
+            console.log(chalk.red(error))
+        }
+        else{
         const latitude= data.latitude
         const longitude=data.longitude
         const place_name=data.placename
@@ -42,6 +46,7 @@ const prayerTimes = ( city,callback )=>{
             console.log(response.body.data[0].timings)
             
        })
+    }
     })
 }
 
