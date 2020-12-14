@@ -1,5 +1,5 @@
 const request = require('request')
-const chalk = require('chalk')
+const chalk = require('./public/node_modules/chalk')
 
 /**
  * 

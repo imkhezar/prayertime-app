@@ -4,13 +4,21 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^4.5.3",
     "chalk": "^4.1.0",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.5.1",
+    "lite-server": "^2.6.1",
+    "mdbootstrap": "^4.19.2",
+    "nodeman": "^1.1.2",
+    "popper.js": "^1.12.9",
     "request": "^2.88.2",
     "unirest": "^0.6.0",
     "yargs": "^16.2.0"
