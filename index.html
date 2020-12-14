@@ -31,7 +31,7 @@
     <div class="container">
   
       <!-- Navbar brand -->
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">Prayers Times</a>
   
       <!-- Collapse button -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
@@ -50,31 +50,20 @@
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#">Features</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link" href="#">Contact Us</a>
           </li>
   
           <!-- Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">Dropdown</a>
-            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
   
         </ul>
         <!-- Links -->
-  
-        <form class="form-inline">
-          <div class="md-form my-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          </div>
-        </form>
+
       </div>
       <!-- Collapsible content -->
   
@@ -86,28 +75,64 @@
   <!-- input feilds-->
 <div class="container">
   <div class="row">
-    <div class="col-md-3">
-      <div class="input-group">
+    <div class="col-md-3 sub-row" style="margin-top:1.5rem;">
+      <!-- Search form -->
+      <div class="input-group md-form form-sm form-2 pl-0">
+        <input class="form-control my-0 py-1 amber-border" type="text" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <span class="input-group-text " style="color: #5A95F5;" id="basic-text1"><i class="fas fa-search text-grey"
+              aria-hidden="true"></i></span>
+        </div>
+      </div>
       
-      <input type="text" class="form-control" placeholder="Search Locations" aria-label="search-location" aria-describedby="basic-addon1">
-      <div class="input-group-prepend">
-        
-        <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
-      </div>
-    </div>
   </div>
-  <div class="col-md-3">
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Dropdown button
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-      </div>
-    </div>
+  <div class="col-md-3 sub-row">
+    <!--Dropdown primary-->
+<div class="dropdown">
+
+  <!--Trigger-->
+  <button class="btn  dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+    aria-haspopup="true" aria-expanded="false">PRAYER CALCULATION</button>
+
+  <!--Menu-->
+  <div class="dropdown-menu dropdown-primary">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+<!--/Dropdown primary-->
     
+</div>
+<div class="col-md-3 sub-row">
+  <!--Dropdown primary-->
+<div class="dropdown">
+
+<!--Trigger-->
+<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+  aria-haspopup="true" aria-expanded="false">Juristic settings</button>
+
+<!--Menu-->
+<div class="dropdown-menu dropdown-primary">
+  <a class="dropdown-item" href="#">Action</a>
+  <a class="dropdown-item" href="#">Another action</a>
+  <a class="dropdown-item" href="#">Something else here</a>
+  <a class="dropdown-item" href="#">Something else here</a>
+</div>
+</div>
+<!--/Dropdown primary-->
+  
+</div>
+<div class="col-md-3 sub-row" style="margin-top:1rem;">
+  <!--Date-->
+  
+  <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker">
+    <input placeholder="Select date" type="text" id="example" class="form-control">
+    <label for="example">Try me...</label>
+    <i class="fas fa-calendar input-prefix" tabindex=0></i>
+  </div>  
+ 
 </div>
 <div class="col-md-3">
   <div class="dropdown dropdown-menu">
@@ -132,22 +157,18 @@
           <div class="col-xs-12 col-sm-2 col-md-2" style="margin-left: 1rem;">
             <div class="card" style="width: 12rem ;">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
+                <h5 class="card-title">Fajar</h5>
+                <p class="card-text"><h1><strong>05:03</strong></h1>AM</p>
+                <p style="color: red;">End Time 7:01 PM</p>
               </div>
             </div>
             </div>
           <div class="col-xs-1 col-sm-2"style="margin-left: 1rem;">
             <div class="card" style="width: 12rem;">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
+                <h5 class="card-title">Zuhar</h5>
+                <p class="card-text"><h1><strong>12:03</strong></h1>PM</p>
+                <p style="color: red;">End Time 4:03 PM</p>
               </div>
             </div>
             
@@ -155,11 +176,9 @@
           <div class="col-xs-1 col-sm-2"style="margin-left: 1rem;">
             <div class="card" style="width: 12rem;">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
+                <h5 class="card-title">Asar</h5>
+                <p class="card-text"><h1><strong>4:03</strong></h1>PM</p>
+                <p style="color: red;">End Time: 5:09 PM</p>
               </div>
             </div>
             
@@ -167,11 +186,9 @@
           <div class="col-xs-1 col-sm-2"style="margin-left: 1rem;">
             <div class="card" style="width: 12rem;">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
+                <h5 class="card-title">Maghrib</h5>
+                <p class="card-text"><h1><strong>5:09</strong></h1>PM</p>
+                <p style="color: red;">End Time 6:30 PM</p>
               </div>
             </div>
             
@@ -179,11 +196,9 @@
           <div class="col-xs-1 col-sm-2"style="margin-left: 1rem;">
             <div class="card" style="width: 12rem;">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
+                <h5 class="card-title">Isha</h5>
+                <p class="card-text"><h1><strong>06:30</strong></h1>PM</p>
+                <p style="color: red;">End Time 05:03 AM</p>
               </div>
             </div>
             
