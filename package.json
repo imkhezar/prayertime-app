@@ -1,7 +1,7 @@
 {
   "name": "prayertime-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "![Search Example](./screenshot.png)\r ## About Prayer Times نماز کے اوقات\r Prayer Times  نماز کے اوقات is a backend nodeJS application that searches any input location, retrieves the longitude and latitude using MAPBOX API, and then fetches the Prayer Times information from the Aladhan API. Currently It does not have front end , front will be added in next release.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -22,5 +22,13 @@
     "request": "^2.88.2",
     "unirest": "^0.6.0",
     "yargs": "^16.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imkhezar/prayertime-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/imkhezar/prayertime-app/issues"
+  },
+  "homepage": "https://github.com/imkhezar/prayertime-app#readme"
 }
