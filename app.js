@@ -1,7 +1,18 @@
 const request = require('request')
 const yargs= require('yargs')
 const {prayerTimes}= require('./PrayerTimes')
+const express=require('express')
+const path = require('path')
 
+
+
+const app=express()
+//console.log(path.join(__dirname,'index.html'))
+app.use(express.static(path.join(__dirname)))
+
+app.listen(3000, () => {
+    console.log('Server is up on port 3000.')
+})
 
 yargs.command({
     command: 'search',
