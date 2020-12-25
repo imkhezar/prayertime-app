@@ -7,9 +7,15 @@ const path = require('path')
 
 
 const app=express()
-console.log(path.join(__dirname,'../public/index.html'))
-app.use(express.static(path.join(__dirname,'../public/')))
+app.set('view engine','hbs')
+//console.log(path.join(__dirname,'../public/index.html'))
+app.use(express.static(path.join(__dirname,'../public')))
+app.get('',(req,res)=>{
+    res.render('index',{
+        title:"Prayer Time"
+    })
 
+})
 /*app.listen(3000, () => {
     console.log('Server is up on port 3000.')
 })*/
