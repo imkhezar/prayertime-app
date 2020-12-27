@@ -14,7 +14,11 @@ const path=require('path')
 
 
 
-
+//**
+ * 
+ * @param {cityname} city 
+ * @param {place_name,latitude,longitude} callback 
+ */
 
 const geocode=(city,callback)=>{
     const url='https://api.mapbox.com/geocoding/v5/mapbox.places/' + city + '.json?access_token=pk.eyJ1IjoiaW1raGV6YXIiLCJhIjoiY2tpaHVmejdvMDEzNzJ4bWluMjRybGhoMiJ9.dTYb0OPpWLvxWzyCXSZS2Q'

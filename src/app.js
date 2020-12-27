@@ -7,19 +7,22 @@ const path = require('path')
 
 
 const app=express()
+
+//Set up Handlebars to serve hbs file in views direcotry
 app.set('view engine','hbs')
-//console.log(path.join(__dirname,'../public/index.html'))
+
+//Setup a directory to serve static assets
 app.use(express.static(path.join(__dirname,'../public')))
+
+//Serve index.hbs in views direcotry
 app.get('',(req,res)=>{
     res.render('index',{
         title:"Prayer Time"
     })
 
 })
-/*app.listen(3000, () => {
-    console.log('Server is up on port 3000.')
-})*/
 
+//This is practice directory where I tried to serve json data on server
 app.get('/showTimes',(req,res)=>{
 
     
@@ -50,28 +53,14 @@ app.get('/showTimes',(req,res)=>{
         })
     })
 
-    /*if(!req.query.address){
-       return res.send({
-            error:"No address added"
-        })
-    }
-    else{
-        prayerTimes(req.query.address,({placename,prayer_times})=>{
-           return res.send({
-                trysearch:"flkdjlkfjls",
-                locationSearched: placename,
-                prayertimes: prayer_times
-            })
-        })
-        
-        /*geocode(req.query.address , (error,{latitude,longitude,location})=>{
+//Server Setup on port 3000,
 
-        })*/
-    //}
-//})
 app.listen(3000,()=>{
 console.log('server is up on port 3000')
 })
+
+
+//These are commonds "Search" it was made when I trying backend
 yargs.command({
     command: 'search',
     describe: 'enter city name to search',
@@ -91,12 +80,3 @@ yargs.command({
     }
 })
 yargs.parse()
-
-
-
-
-
-/*request({url: url , json:true} , ( error , response ) =>{
-    console.log("current date is "+response.body.data[0].date.gregorian.date)
-   console.log(response.body.data[0].timings)
-})*/
