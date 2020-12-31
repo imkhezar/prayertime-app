@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<link rel="stylesheet" href="node_modules/mdbootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
+<link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    
+    
+    <!-- endbuild -->
+    
+    <title>Prayer Times</title>
+</head>
+
+
+
+
+<body>
+  {{>header}}
+  <form id='abc'>
+    <input type="text" placeholder="Location Search" id='def'>
+    <button type="submit">Search</button>
+</form>
+
+  <!-- input feilds-->
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 sub-row" style="margin-top:1.5rem;">
+      <!-- Search form -->
+      <div class="input-group md-form form-sm form-2 pl-0 "id="searchForm">
+        <input class="form-control my-0 py-1 amber-border" type="text" placeholder="Search" aria-label="Search" id="search">
+        <div class="input-group-append">
+          <button><span class="input-group-text " id="searchButton" style="color: #5A95F5;" id="basic-text1"><i class="fas fa-search text-grey"
+              aria-hidden="false"></i></span>
+        </div>
+      </div>
+      
+  </div>
+  <div class="col-md-3 sub-row">
+    <!--Dropdown primary-->
+<div class="dropdown">
+
+  <!--Trigger-->
+  <button class="btn  dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+    aria-haspopup="true" aria-expanded="false">PRAYER CALCULATION</button>
+
+  <!--Menu-->
+  <div class="dropdown-menu dropdown-primary">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+<!--/Dropdown primary-->
+    
+</div>
+<div class="col-md-3 sub-row">
+  <!--Dropdown primary-->
+<div class="dropdown">
+
+<!--Trigger-->
+<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+  aria-haspopup="true" aria-expanded="false">Juristic settings</button>
+
+<!--Menu-->
+<div class="dropdown-menu dropdown-primary">
+  <a class="dropdown-item" href="#">Action</a>
+  <a class="dropdown-item" href="#">Another action</a>
+  <a class="dropdown-item" href="#">Something else here</a>
+  <a class="dropdown-item" href="#">Something else here</a>
+</div>
+</div>
+<!--/Dropdown primary-->
+  
+</div>
+<div class="col-md-3 sub-row" style="margin-top:1rem;">
+  <!--Date-->
+  
+  <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker">
+    <input placeholder="Select date" type="text" id="example" class="form-control">
+    <label for="example">Try me...</label>
+    <i class="fas fa-calendar input-prefix" tabindex=0></i>
+  </div>  
+ 
+</div>
+<div class="col-md-3">
+  <div class="dropdown dropdown-menu">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Dropdown button
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div>
+        
+               
+      
+  </div>
+</div>
+  <!-- input feilds-->
+     <!--Container of whole page-->
+      <div class="container" style="padding-top: 5rem;">
+        <div class="row row-content">
+          <div class="col-xs-12 col-sm-2 col-md-2" style="margin-left: 1rem;">
+            <div class="card" style="width: 12rem ;">
+              <div class="card-body">
+                <h5 class="card-title">Fajar</h5>
+                <p class="card-text"><h1 ><strong id="fajar">{{fajrSub}}</strong></h1></p>
+                <p style="color: red;"id="fajar_end">{{sunrise}}</p>
+              </div>
+            </div>
+            </div>
+          <div class="col-xs-1 col-sm-2"style="margin-left: 1rem;">
+            <div class="card" style="width: 12rem;">
+              <div class="card-body">
+                <h5 class="card-title">Zuhar</h5>
+                <p class="card-text"><h1><strong id="zuhar">{{zuhar}}</strong></h1></p>
+                <p style="color: red;"id="zuhar_end">{{zuhar_end}}</p>
+              </div>
+            </div>
+            
+          </div>
+          <div class="col-xs-1 col-sm-2"style="margin-left: 1rem;">
+            <div class="card" style="width: 12rem;">
+              <div class="card-body">
+                <h5 class="card-title">Asar</h5>
+                <p class="card-text"><h1><strong id="asr">{{asr}}</strong></h1></p>
+                <p style="color: red;"id="asr_end">{{asr_end}}</p>
+              </div>
+            </div>
+            
+          </div>
+          <div class="col-xs-1 col-sm-2"style="margin-left: 1rem;">
+            <div class="card" style="width: 12rem;">
+              <div class="card-body">
+                <h5 class="card-title">Maghrib</h5>
+                <p class="card-text"><h1><strong id="maghrib">{{maghrib}}</strong></h1></p>
+                <p style="color: red;"id="maghrib_end">{{maghrib_end}}</p>
+              </div>
+            </div>
+            
+          </div>
+          <div class="col-xs-1 col-sm-2"style="margin-left: 1rem;">
+            <div class="card" style="width: 12rem;">
+              <div class="card-body">
+                <h5 class="card-title">Isha</h5>
+                <p class="card-text"><h1><strong id="isha">{{isha}}</strong></h1></p>
+                <p style="color: red;"id="isha_end">{{isha_end}}</p>
+              </div>
+            </div>
+            
+          </div>
+
+        </div>
+
+      </div>
+      
+      
+
+     <!--Container of whole page-->
+
+      <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+      <!-- build:js js/main.js -->
+      
+      <script type="text/javascript" src="node_modules/mdbootstrap/js/jquery.min.js"></script>
+      <script type="text/javascript" src="node_modules/mdbootstrap/js/popper.min.js"></script>
+      <script type="text/javascript" src="node_modules/mdbootstrap/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="node_modules/mdbootstrap/js/mdb.min.js"></script>
+      <script type="text/javascript" src="/js/app.js" charset="utf-8"></script>
+           <!-- endbuild -->
+    
+  
+    
+
+</body>
+<footer>
+  
+</footer>
+
+</html>
