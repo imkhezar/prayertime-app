@@ -65,6 +65,8 @@ const geocode=(city,callback)=>{
  */
 
 const prayerTimes=(latitude,longitude,callback)=>{
+
+    console.log(latitude,longitude)
     
     const url ='http://api.aladhan.com/v1/calendar?latitude='+ latitude +'&longitude='+ longitude +'&method=2&school=1'
     request({url: url , json:true} , ( error , response ) =>{

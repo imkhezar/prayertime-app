@@ -2,6 +2,10 @@
 var weatherForm = document.getElementById('abc')
 //console.log(weatherForm)
 var search = document.getElementById('def')
+//search button pressed
+var onSearchButton=document.getElementById('searchButton')
+
+
 //fajar
 var fajar=document.getElementById('fajar')
 var fajar_end=document.getElementById('fajar_end')
@@ -27,9 +31,10 @@ console.log(fajar)
 
 
 
-weatherForm.addEventListener("submit", (e) => {
+weatherForm.addEventListener("click", (e) => {
     
-    e.preventDefault()
+    //e.preventDefault()
+    search.textContent=""
 
     const location = search.value
     console.log(location)
@@ -77,6 +82,10 @@ weatherForm.addEventListener("submit", (e) => {
                 //isha
                 ishaDOM.textContent=ishaSub
                 isha_end.textContent=fajr
+
+                //locations set
+                
+                document.getElementById('def').setAttribute('placeholder','test value')
 
 
                 

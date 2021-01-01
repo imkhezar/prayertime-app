@@ -1,4 +1,5 @@
 .input-group.md-form.form-sm.form-1 input{
+    width:25%;
     border: 1px solid #bdbdbd;
     border-top-right-radius: 0.25rem;
     border-bottom-right-radius: 0.25rem;
@@ -20,3 +21,11 @@
   .sub-row{
     margin-top: 2rem;
   }
+  .equalWidth{
+    width: 100%;
+    height: 50%;
+    
+  }
+  
+
+  
