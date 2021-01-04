@@ -10,10 +10,17 @@ const hbs=require('hbs')
 const app=express()
 const port=process.env.PORT || 3000
 
+//Handel redirect
+
+
+
 //Define path for express config
 app.use(express.static(path.join(__dirname,'../public')))
 const viewsPath =path.join(__dirname,'../templates/views')
 const partialsPath=path.join(__dirname,'../templates/partials')
+
+//redirect
+
 
 //Set up Handlebars and locations
 app.set('view engine','hbs')
@@ -27,6 +34,9 @@ app.get('',(req,res)=>{
         title:"Prayer Time"
     })
 
+})
+app.get('/comingsoon',(req,res)=>{
+    res.render('comingsoon')
 })
 
 //This is practice directory where I tried to serve json data on server

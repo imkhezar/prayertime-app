@@ -26,6 +26,13 @@
     height: 50%;
     
   }
+  #under_construct_style{
+    background-color: red;
+    
+    color: white;
+    border-bottom: white;
+    text-shadow: tomato;
+  }
   
 
   
