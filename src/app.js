@@ -8,6 +8,7 @@ const hbs=require('hbs')
 
 
 const app=express()
+const port=process.env.PORT || 3000
 
 //Define path for express config
 app.use(express.static(path.join(__dirname,'../public')))
@@ -70,8 +71,8 @@ app.get('/showTimes',(req,res)=>{
 
 //Server Setup on port 3000,
 
-app.listen(3000,()=>{
-console.log('server is up on port 3000')
+app.listen(port,()=>{
+console.log('server is up on port'+port)
 })
 
 
