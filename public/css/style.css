@@ -20,10 +20,12 @@
   }
   .sub-row{
     margin-top: 2rem;
+    
   }
   .equalWidth{
     width: 100%;
     height: 50%;
+    
     
   }
   #under_construct_style{
@@ -32,6 +34,14 @@
     color: white;
     border-bottom: white;
     text-shadow: tomato;
+  }
+  .card{
+    width: 212px;
+  height: 200px;
+  margin: 0 12px;
+  padding: 16px;
+  border-radius: 16px;
+  background-color: #f7f9fa;
   }
   
   
