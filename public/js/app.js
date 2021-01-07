@@ -6,6 +6,29 @@ var search = document.getElementById('def')
 var onSearchButton=document.getElementById('searchButton')
 
 
+var prayerCal=null;//=> prayer cal
+//Geting value from dropdowns
+
+    $(document).ready(function () {
+        $('#prayerCalculations a').on('click', function () {
+           txt= ($(this).text());
+           console.log(txt)
+           prayerCal=txt.substring(0,1)
+           
+           
+         // alert("Your Favourite Sports is "+txt);
+        });
+      });
+
+
+
+ 
+
+  
+  
+
+
+
 //fajar
 var fajar=document.getElementById('fajar')
 var fajar_end=document.getElementById('fajar_end')
@@ -31,7 +54,7 @@ console.log(fajar)
 
 
 
-weatherForm.addEventListener("click", (e) => {
+onSearchButton.addEventListener("click", (e) => {
     
     //e.preventDefault()
     search.textContent=""
@@ -85,7 +108,7 @@ weatherForm.addEventListener("click", (e) => {
 
                 //locations set
                 
-                document.getElementById('def').setAttribute('placeholder','test value')
+                document.getElementById('def').setAttribute('value',data.place_name)
 
 
                 

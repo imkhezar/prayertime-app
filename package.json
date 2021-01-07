@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node src/app.js",
-    "dev": "lite-server"
+    "dev": "nodemon src/app.js -e js,hbs,css"
   },
   "keywords": [],
   "author": "",

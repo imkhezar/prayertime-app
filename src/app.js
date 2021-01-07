@@ -27,6 +27,7 @@ app.set('view engine','hbs')
 app.set('views',viewsPath)
 hbs.registerPartials(partialsPath)
 const validator=require('validator')
+const { METHODS } = require('http')
 
 //Serve index.hbs in templates direcotry
 app.get('',(req,res)=>{
@@ -42,7 +43,7 @@ app.get('/comingsoon',(req,res)=>{
 //This is practice directory where I tried to serve json data on server
 app.get('/showTimes',(req,res)=>{
 
-    console.log(req.query.address)
+    console.log(req.query.address,req.query.method)
 
 
         if(validator.isEmpty(req.query.address) ){
