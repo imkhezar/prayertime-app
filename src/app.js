@@ -41,9 +41,9 @@ app.get('/comingsoon',(req,res)=>{
 })
 
 //This is practice directory where I tried to serve json data on server
-app.get('/showTimes',(req,res)=>{
+app.get('/showTimes/',(req,res)=>{
 
-    console.log(req.query.address,req.query.method)
+    console.log(req.query.address,req.query.method,req.query.method,req.query.school)
 
 
         if(validator.isEmpty(req.query.address) ){
@@ -60,7 +60,7 @@ app.get('/showTimes',(req,res)=>{
                 
             }
             else{
-                prayerTimes(latitude,longitude,(error,{prayer_times}={})=>{
+                prayerTimes(latitude,longitude,req.query.method,req.query.school,(error,{prayer_times}={})=>{
                         if(error){
                             return res.send({
                                 error: "No location found"
