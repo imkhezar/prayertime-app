@@ -1,4 +1,4 @@
-.input-group.md-form.form-sm.form-1 input{
+/*.input-group.md-form.form-sm.form-1 input{
     width:25%;
     border: 1px solid #bdbdbd;
     border-top-right-radius: 0.25rem;
@@ -33,7 +33,7 @@
     color: white;
     border-bottom: white;
     text-shadow: tomato;
-  }
+  }*/
   .card{
     width: 212px;
   height: 200px;
@@ -1557,8 +1557,9 @@
   }
   
   .s002 {
-    min-height: 100vh;
+    min-height: 12.5%;
     display: -ms-flexbox;
+    border-radius: 50px;
     display: flex;
     -ms-flex-pack: center;
         justify-content: center;
@@ -1595,6 +1596,7 @@
         justify-content: space-between;
     -ms-flex-align: center;
         align-items: center;
+        
   }
   
   .s002 form .inner-form .input-field {
