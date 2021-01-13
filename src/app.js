@@ -17,6 +17,8 @@ const port=process.env.PORT || 3000
 //Define path for express config
 app.use(express.static(path.join(__dirname,'../public')))
 const viewsPath =path.join(__dirname,'../templates/views')
+//const imagesPath=path.join(__dirname,'../public/assets/images')
+
 const partialsPath=path.join(__dirname,'../templates/partials')
 
 //redirect
@@ -24,7 +26,9 @@ const partialsPath=path.join(__dirname,'../templates/partials')
 
 //Set up Handlebars and locations
 app.set('view engine','hbs')
+//app.use(express.static(imagesPath)); 
 app.set('views',viewsPath)
+
 hbs.registerPartials(partialsPath)
 const validator=require('validator')
 const { METHODS } = require('http')
@@ -41,9 +45,9 @@ app.get('/comingsoon',(req,res)=>{
 })
 
 //This is practice directory where I tried to serve json data on server
-app.get('/showTimes',(req,res)=>{
+app.get('/showTimes/',(req,res)=>{
 
-    console.log(req.query.address,req.query.method)
+    console.log(req.query.address,req.query.method,req.query.method,req.query.school)
 
 
         if(validator.isEmpty(req.query.address) ){
@@ -60,7 +64,7 @@ app.get('/showTimes',(req,res)=>{
                 
             }
             else{
-                prayerTimes(latitude,longitude,(error,{prayer_times}={})=>{
+                prayerTimes(latitude,longitude,req.query.method,req.query.school,(error,{prayer_times}={})=>{
                         if(error){
                             return res.send({
                                 error: "No location found"

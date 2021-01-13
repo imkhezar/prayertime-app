@@ -9,7 +9,7 @@ var onSearchButton=document.getElementById('searchButton')
 var prayerCal=null;//=> prayer cal
 //Geting value from dropdowns
 
-    $(document).ready(function () {
+  /*  $(document).ready(function () {
         $('#prayerCalculations a').on('click', function () {
            txt= ($(this).text());
            console.log(txt)
@@ -18,7 +18,7 @@ var prayerCal=null;//=> prayer cal
            
          // alert("Your Favourite Sports is "+txt);
         });
-      });
+      });*/
 
 
 
@@ -62,7 +62,14 @@ onSearchButton.addEventListener("click", (e) => {
     const location = search.value
     console.log(location)
 
-    fetch('/showtimes?address=' + location).then((response) => {
+
+    //remove this when you get value from user
+    const method=2
+    const school=1
+
+    //future URL /showtimes?address=some address&method=1&school=0
+
+    fetch('/showtimes?address=' + location+'&'+method+'&'+school).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 console.log(data.error)

@@ -64,11 +64,12 @@ const geocode=(city,callback)=>{
  * @param {return prayertimes} callback 
  */
 
-const prayerTimes=(latitude,longitude,callback)=>{
+const prayerTimes=(latitude,longitude,method,school,callback)=>{
 
-    console.log(latitude,longitude)
     
-    const url ='http://api.aladhan.com/v1/calendar?latitude='+ latitude +'&longitude='+ longitude +'&method=2&school=1'
+    console.log('message public js'+method+school,latitude,longitude)
+    
+    const url ='http://api.aladhan.com/v1/calendar?latitude='+ latitude +'&longitude='+ longitude +'&method='+method+'&school='+school+''
     request({url: url , json:true} , ( error , response ) =>{
     
       // console.log('Location: '+ chalk.bgGreenBright(place_name))
@@ -82,7 +83,9 @@ const prayerTimes=(latitude,longitude,callback)=>{
             callback(undefined,{
                prayer_times:response.body.data[0].timings
                
+               
             })
+            console.log(response.body.data[0].meta.method.name)
             
         }
         
