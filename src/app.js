@@ -17,6 +17,8 @@ const port=process.env.PORT || 3000
 //Define path for express config
 app.use(express.static(path.join(__dirname,'../public')))
 const viewsPath =path.join(__dirname,'../templates/views')
+//const imagesPath=path.join(__dirname,'../public/assets/images')
+
 const partialsPath=path.join(__dirname,'../templates/partials')
 
 //redirect
@@ -24,7 +26,9 @@ const partialsPath=path.join(__dirname,'../templates/partials')
 
 //Set up Handlebars and locations
 app.set('view engine','hbs')
+//app.use(express.static(imagesPath)); 
 app.set('views',viewsPath)
+
 hbs.registerPartials(partialsPath)
 const validator=require('validator')
 const { METHODS } = require('http')
