@@ -40,7 +40,7 @@
   height: 200px;
   margin: 0 12px;
   padding: 16px;
-  /*border-radius: 16px;*/
+  border-radius: 0;
   background-color: #f7f9fa;
   }
   html {
