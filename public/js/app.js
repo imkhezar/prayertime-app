@@ -9,8 +9,7 @@ var onSearchButton=document.getElementById('searchButton')
 /*var prayerCal =document.getElementById('prayerCalc')
 var value = prayerCal.options[prayerCal.selectedIndex].value;*/
 
-var school =document.getElementById('school')
-var schoolValue=school.options[school.selectedIndex].value
+
 //Geting value from dropdowns
 
   /*  $(document).ready(function () {
@@ -65,6 +64,9 @@ onSearchButton.addEventListener("click", (e) => {
     
     //e.preventDefault()
     search.textContent=""
+    var school =document.getElementById('school')
+    var schoolValue=school.options[school.selectedIndex].value
+    console.log(schoolValue)
 
     const location = search.value
     console.log(location)
@@ -72,11 +74,11 @@ onSearchButton.addEventListener("click", (e) => {
 
     //remove this when you get value from user
     const method=1
-    const school=1
+    //const school=1
 
     //future URL /showtimes?address=some address&method=1&school=0
 
-    fetch('/showtimes?address=' +location+'&'+method+'&'+school).then((response) => {
+    fetch('/showtimes?address=' +location+'&'+method+'&'+schoolValue).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 console.log(data.error)

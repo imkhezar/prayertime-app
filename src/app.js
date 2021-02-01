@@ -65,7 +65,8 @@ app.get('/showTimes/',(req,res)=>{
             }
             else{
                 //es(latitude,longitude,req.query.method,req.query.school,(error,{prayer_times}={})=>{
-                prayerTimes(latitude,longitude,1,2,(error,{prayer_times}={})=>{
+                prayerTimes(latitude,longitude,2,1,(error,{prayer_times}={})=>{
+                    console.log('here in src js'+req.query.school)
                         if(error){
                             return res.send({
                                 error: "No location found"
