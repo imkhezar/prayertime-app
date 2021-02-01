@@ -64,7 +64,9 @@ const geocode=(city,callback)=>{
  * @param {return prayertimes} callback 
  */
 
+
 const prayerTimes=(latitude,longitude,method,school,callback)=>{
+    
 
     
     console.log('message public js'+method+school,latitude,longitude)
@@ -85,7 +87,7 @@ const prayerTimes=(latitude,longitude,method,school,callback)=>{
                
                
             })
-            console.log(response.body.data[0].meta.method.name)
+            //console.log(response.body.data[0].meta.method.name)
             
         }
         

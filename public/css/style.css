@@ -1812,6 +1812,7 @@
       width: 100%;
     }
     .s002 form .inner-form .input-field.second-wrap {
+     
       width: calc(50% - 7.5px);
       max-width: none;
     }

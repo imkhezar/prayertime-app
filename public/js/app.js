@@ -1,12 +1,16 @@
 
-var weatherForm = document.getElementById('abc')
+var prayerForm = document.getElementById('prayerForm')
 //console.log(weatherForm)
-var search = document.getElementById('def')
+var search = document.getElementById('search')
 //search button pressed
 var onSearchButton=document.getElementById('searchButton')
 
 
-var prayerCal=null;//=> prayer cal
+/*var prayerCal =document.getElementById('prayerCalc')
+var value = prayerCal.options[prayerCal.selectedIndex].value;*/
+
+var school =document.getElementById('school')
+var schoolValue=school.options[school.selectedIndex].value
 //Geting value from dropdowns
 
   /*  $(document).ready(function () {
@@ -49,6 +53,9 @@ var ishaDOM=document.getElementById('isha')
 var isha_end=document.getElementById('isha_end')
 
 console.log(fajar)
+
+//location below Card
+var locDom=document.getElementById('locSet')
 //console.log(search)
 
 
@@ -64,12 +71,12 @@ onSearchButton.addEventListener("click", (e) => {
 
 
     //remove this when you get value from user
-    const method=2
+    const method=1
     const school=1
 
     //future URL /showtimes?address=some address&method=1&school=0
 
-    fetch('/showtimes?address=' + location+'&'+method+'&'+school).then((response) => {
+    fetch('/showtimes?address=' +location+'&'+method+'&'+school).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 console.log(data.error)
@@ -114,8 +121,8 @@ onSearchButton.addEventListener("click", (e) => {
                 isha_end.textContent=fajr
 
                 //locations set
-                
-                document.getElementById('def').setAttribute('value',data.place_name)
+                locDom.textContent=data.place_name
+               
 
 
                 
