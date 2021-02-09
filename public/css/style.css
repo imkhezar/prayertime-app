@@ -36,13 +36,19 @@
     text-shadow: tomato;
   }*/
   .card{
-    width: 212px;
+    width: 100%;
   height: 200px;
-  margin: 0 12px;
   padding: 16px;
   border-radius: 0;
   background-color: #f7f9fa;
   }
+  @media (max-width: 978px) {
+    .card {
+      background-color: red;
+    }
+  }
+
+ 
   html {
     line-height: 1.15;
     /* 1 */
@@ -1469,12 +1475,37 @@
     border-bottom-color: #393939;
   }
   .card{
-    width: 212px;
+    width: 100%;
   height: 200px;
-  margin: 0 12px;
+  margin: 0 0px;
   padding: 16px;
   border-radius: 16px;
   background-color: #f7f9fa;
+  }
+  @media screen and (min-width: 992px) {
+    .card {
+      width: 160px;
+height: 200px;
+margin: 10px;
+    margin-left: 10px;
+padding: 0px;
+border-radius: 16px;
+background-color: #f7f9fa;
+margin-left: 80%;
+
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .card {
+      width: 100%;
+height: 200px;
+margin: 5px;
+    margin-left: px;
+padding: 0px;
+border-radius: 16px;
+background-color: #f7f9fa;
+
+    }
   }
   
   .flatpickr-time .numInputWrapper span.arrowDown:after {
