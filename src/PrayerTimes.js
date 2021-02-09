@@ -65,17 +65,17 @@ const geocode=(city,callback)=>{
  */
 
 
-const prayerTimes=(latitude,longitude,method,school,callback)=>{
+const prayerTimes=(address,schoolValue,callback)=>{
     
 
     
-    console.log('message public js'+method+school,latitude,longitude)
-    
-    const url ='http://api.aladhan.com/v1/calendar?latitude='+ latitude +'&longitude='+ longitude +'&method='+method+'&school='+school+''
-    request({url: url , json:true} , ( error , response ) =>{
+    const url3='http://api.aladhan.com/v1/timingsByAddress?address='+address+'&school='+schoolValue+''
+    const url2='http://api.aladhan.com/v1/hijriCalendarByAddress?address='+address+''
+    //const url ='http://api.aladhan.com/v1/calendar?latitude='+ latitude +'&longitude='+ longitude +'&method='+method+'&school='+school+''
+    request({url: url3 , json:true} , ( error , response ) =>{
     
       // console.log('Location: '+ chalk.bgGreenBright(place_name))
-        console.log(response.body.data[0].timings)
+        //console.log(response.body.data[0].timings)
       
         if(error){
             return {error:error}
@@ -83,7 +83,7 @@ const prayerTimes=(latitude,longitude,method,school,callback)=>{
         else {
             
             callback(undefined,{
-               prayer_times:response.body.data[0].timings
+               prayer_times:response.body.data.timings
                
                
             })

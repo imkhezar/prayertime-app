@@ -56,16 +56,16 @@ app.get('/showTimes/',(req,res)=>{
             })
         }
        
-        geocode(req.query.address,(error,{latitude,longitude,place_name}={})=>{
-            if(!req.query.address){
-                return res.send({
-                    error:error
-                })
+        // geocode(req.query.address,(error)=>{
+        //     if(!req.query.address){
+        //         return res.send({
+        //             error:error
+        //         })
                 
-            }
-            else{
+        //     }
+             else{
                 //es(latitude,longitude,req.query.method,req.query.school,(error,{prayer_times}={})=>{
-                prayerTimes(latitude,longitude,2,1,(error,{prayer_times}={})=>{
+                prayerTimes(req.query.address,req.query.school,(error,{prayer_times}={})=>{
                     console.log('here in src js'+req.query.school)
                         if(error){
                             return res.send({
@@ -74,17 +74,15 @@ app.get('/showTimes/',(req,res)=>{
                         }
                         else{
                             res.send({
-                                place_name,
-                                latitude,
-                                longitude,
                                 prayer_times
                             })
                         }
                 })
+                
             }    
     
         })
-    })
+   // })
 
 //Server Setup on port 3000,
 
@@ -92,24 +90,3 @@ app.listen(port,()=>{
 console.log('server is up on port'+port)
 })
 
-
-//These are commonds "Search" it was made when I trying backend
-yargs.command({
-    command: 'search',
-    describe: 'enter city name to search',
-    builder : {
-        cityname:{
-            describe: 'Enter city name to search for it and see prayer times of city',
-            demandOption: true,
-            type: 'string'
-        },
-
-
-    },  
-    handler: function(args){
-        prayerTimes(args.cityname)
-        
-
-    }
-})
-yargs.parse()

@@ -73,12 +73,12 @@ onSearchButton.addEventListener("click", (e) => {
 
 
     //remove this when you get value from user
-    const method=1
+    //const method=1
     //const school=1
 
     //future URL /showtimes?address=some address&method=1&school=0
 
-    fetch('/showtimes?address=' +location+'&'+method+'&'+schoolValue).then((response) => {
+    fetch('/showtimes?address=' +location+'&school='+schoolValue).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 console.log(data.error)
