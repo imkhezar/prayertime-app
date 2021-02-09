@@ -5,33 +5,6 @@ var search = document.getElementById('search')
 //search button pressed
 var onSearchButton=document.getElementById('searchButton')
 
-
-/*var prayerCal =document.getElementById('prayerCalc')
-var value = prayerCal.options[prayerCal.selectedIndex].value;*/
-
-
-//Geting value from dropdowns
-
-  /*  $(document).ready(function () {
-        $('#prayerCalculations a').on('click', function () {
-           txt= ($(this).text());
-           console.log(txt)
-           prayerCal=txt.substring(0,1)
-           
-           
-         // alert("Your Favourite Sports is "+txt);
-        });
-      });*/
-
-
-
- 
-
-  
-  
-
-
-
 //fajar
 var fajar=document.getElementById('fajar')
 var fajar_end=document.getElementById('fajar_end')
@@ -70,13 +43,6 @@ onSearchButton.addEventListener("click", (e) => {
 
     const location = search.value
     console.log(location)
-
-
-    //remove this when you get value from user
-    //const method=1
-    //const school=1
-
-    //future URL /showtimes?address=some address&method=1&school=0
 
     fetch('/showtimes?address=' +location+'&school='+schoolValue).then((response) => {
         response.json().then((data) => {
@@ -124,10 +90,6 @@ onSearchButton.addEventListener("click", (e) => {
 
                 //locations set
                 locDom.textContent=data.place_name
-               
-
-
-                
                 
             }
         })
