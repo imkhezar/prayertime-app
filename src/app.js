@@ -55,14 +55,6 @@ app.get('/showTimes/',(req,res)=>{
                 error:'Kindly Provide a Valid Address'
             })
         }
-       
-        // geocode(req.query.address,(error)=>{
-        //     if(!req.query.address){
-        //         return res.send({
-        //             error:error
-        //         })
-                
-        //     }
              else{
                 //es(latitude,longitude,req.query.method,req.query.school,(error,{prayer_times}={})=>{
                 prayerTimes(req.query.address,req.query.school,(error,{prayer_times}={})=>{
@@ -82,8 +74,7 @@ app.get('/showTimes/',(req,res)=>{
             }    
     
         })
-   // })
-
+   
 //Server Setup on port 3000,
 
 app.listen(port,()=>{
