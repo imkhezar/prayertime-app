@@ -28,9 +28,6 @@ const prayerTimes=(address,schoolValue,callback)=>{
     //const url ='http://api.aladhan.com/v1/calendar?latitude='+ latitude +'&longitude='+ longitude +'&method='+method+'&school='+school+''
     request({url: url3 , json:true} , ( error , response ) =>{
     
-      // console.log('Location: '+ chalk.bgGreenBright(place_name))
-        //console.log(response.body.data[0].timings)
-      
         if(error){
             return {error:error}
         }
