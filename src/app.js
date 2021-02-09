@@ -1,6 +1,6 @@
 const request = require('request')
 const yargs= require('yargs')
-const {prayerTimes,geocode}= require('../src/PrayerTimes')
+const {prayerTimes}= require('../src/PrayerTimes')
 const express=require('express')
 const path = require('path')
 const hbs=require('hbs')
